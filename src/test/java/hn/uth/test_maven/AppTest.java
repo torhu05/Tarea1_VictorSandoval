@@ -23,7 +23,6 @@ private static Random rd;
 	
 	@Test
 	public void areaCirculoConAleatorio() {
-		//NEXT DOUBLE GENERA UN NÚMERO ALEATORIO DECIMAL
 		double numero1 = Math.abs(generarAleatorio());
 		double resultadoEsperado = Math.PI*numero1*numero1;		
 		assertEquals(App.areaCirculo(numero1), resultadoEsperado, 0.01);		
@@ -33,19 +32,16 @@ private static Random rd;
 	
 	@Test
 	public void areaCirculoConNegativo() {
-		//NEXT DOUBLE GENERA UN NÚMERO ALEATORIO DECIMAL
 		assertTrue(App.areaCirculo(-5)==-1);	
 	}
 	
 	@Test
 	public void areaCirculoConPositivo() {
-		//NEXT DOUBLE GENERA UN NÚMERO ALEATORIO DECIMAL
 		assertFalse(App.areaCirculo(5)==-1);	
 	}
 	
 	@Test
 	public void areaCuadradoConAleatorio() {
-		//NEXT DOUBLE GENERA UN NÚMERO ALEATORIO DECIMAL
 		double numero1 = Math.abs(generarAleatorio());
 		double resultadoEsperado = numero1*numero1;		
 		assertEquals(App.areaCuadrado(numero1), resultadoEsperado, 0.01);		
@@ -55,19 +51,44 @@ private static Random rd;
 	
 	@Test
 	public void areaCuadradoConNegativo() {
-		//NEXT DOUBLE GENERA UN NÚMERO ALEATORIO DECIMAL
 		assertTrue(App.areaCuadrado(-10)==-1);	
 	}
 	
 	@Test
 	public void areaCuadradoConPositivo() {
-		//NEXT DOUBLE GENERA UN NÚMERO ALEATORIO DECIMAL
 		assertFalse(App.areaCuadrado(20)==-1);	
 	}
 	
 	
 	
+	@Test
+	public void areaRectanguloConAleatorio() {
+		double numero1 = Math.abs(generarAleatorio());
+		double numero2 = Math.abs(generarAleatorio());
+		double resultadoEsperado = numero1*numero2;		
+		assertEquals(App.areaRectangulo(numero1,numero2), resultadoEsperado, 0.01);		
+		System.out.print("Numero1= "+numero1);		
+		System.out.print("Numero1= "+numero2);
+		System.out.println(" Resultado= "+resultadoEsperado);
+	}
 	
+	@Test
+	public void areaRectanguloCon1Negativo() {
+		assertTrue(App.areaRectangulo(-10,9)==-1);	
+	}
+	@Test
+	public void areaRectanguloCon1bNegativo() {
+		assertTrue(App.areaRectangulo(10,-9)==-1);	
+	}
+	@Test
+	public void areaRectanguloCon2Negativo() {
+		assertTrue(App.areaRectangulo(-10,-9)==-1);	
+	}
+
+	@Test
+	public void areaRectanguloConPositivo() {
+		assertFalse(App.areaRectangulo(20,4)==-1);	
+	}
    
 	
 	@AfterClass

@@ -24,6 +24,15 @@ public class App
     		return -1;
     	
 	}
+	
+	public static double areaRectangulo(double lado1, double lado2) {
+    	if(noNegativo(lado1)&&noNegativo(lado2)) {
+    		return lado1*lado2;
+    	}
+    	else
+    		return -1;
+    	
+	}
 	    
     
     public static boolean noNegativo(double radio) {
