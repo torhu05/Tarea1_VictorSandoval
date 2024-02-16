@@ -33,6 +33,15 @@ public class App
     		return -1;
     	
 	}
+	
+	public static double areaTriangulo(double base, double altura) {
+    	if(noNegativo(base)&&noNegativo(altura)) {
+    		return base*altura/2;
+    	}
+    	else
+    		return -1;
+    	
+	}
 	    
     
     public static boolean noNegativo(double radio) {
