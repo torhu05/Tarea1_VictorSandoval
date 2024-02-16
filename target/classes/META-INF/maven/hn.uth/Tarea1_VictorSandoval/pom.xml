@@ -26,6 +26,11 @@
 		<version>4.13.2</version>
 		<scope>test</scope>
 	</dependency>
+    <dependency>
+    	<groupId>hn.uth</groupId>
+    	<artifactId>junit-test-app</artifactId>
+    	<version>1.0.0</version>
+    </dependency>
   </dependencies>
 
   <build>
