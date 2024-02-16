@@ -7,12 +7,22 @@ package hn.uth.test_maven;
  */
 public class App 
 {
-	public static void main( String[] args )
-    {
-        System.out.println( "Tarea 1 Victor Sandoval" );
-    }
-    
-    public static double areaCirculo(double radio) {
-    	return Math.pow(radio,2)*Math.PI;
+	public static double areaCirculo(double radio) {
+    	if(noNegativo(radio)) {
+    		return Math.pow(radio,2)*Math.PI;
+    	}
+    	else
+    		return -1;
+    	
 	}
+    
+    
+    public static boolean noNegativo(double radio) {
+    	if(radio>=0)
+    		return true;
+    	else
+    		return false;
+    		
+    	
+    }
 }
