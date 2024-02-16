@@ -15,7 +15,16 @@ public class App
     		return -1;
     	
 	}
-    
+	
+	public static double areaCuadrado(double lado) {
+    	if(noNegativo(lado)) {
+    		return Math.pow(lado,2);
+    	}
+    	else
+    		return -1;
+    	
+	}
+	    
     
     public static boolean noNegativo(double radio) {
     	if(radio>=0)
